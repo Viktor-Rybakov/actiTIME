@@ -1,0 +1,64 @@
+.subscribe-form {
+  $height: 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: start;
+  }
+
+  &__input {
+    height: $height;
+    width: 100%;
+    padding-left: 15px;
+    margin-bottom: 22px;
+
+    color: #A9A0B6;
+    background-color: #fff;
+    border: none;
+    border-radius: 4px;
+
+    @include tablet() {
+      width: 247px;
+      margin-right: 37px;
+      margin-bottom: 0;
+    }
+
+    @include tablet-ipad() {
+      margin-right: 39px;
+    }
+
+    @include desktop() {
+      width: 419px;
+      margin-right: 33px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: $height;
+    padding: 0 28px;
+
+    color: #fff;
+    background-color: #EEAA12;
+    border: none;
+    border-radius: $height / 2;
+    cursor: pointer;
+
+    &:focus,
+    &:hover {
+      background-color: #FFBE2D;
+    }
+
+    &:disabled {
+      background-color: #c5bbbb;
+    }
+  }
+}

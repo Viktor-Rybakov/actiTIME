@@ -1,0 +1,32 @@
+.footer {
+  padding-top: 58px;
+  padding-bottom: 52px;
+
+  background-color: #9C69E2;
+
+  &__container {
+    display: grid;
+    grid-template-areas:  "logo menu"
+                          "form form";
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr auto;
+
+    @include tablet() {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+  }
+
+  &__menu {
+    grid-area: menu;
+  }
+
+  &__form {
+    grid-area: form;
+  }
+}

@@ -1,0 +1,30 @@
+$tablet: 768px;
+$tablet-ipad: 992px;
+$desktop: 1320px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin tablet-ipad {
+  @media (min-width: #{$tablet-ipad}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media  only screen and (-webkit-min-device-pixel-ratio: 1.5),
+          only screen and (min--moz-device-pixel-ratio: 1.5),
+          only screen and (-o-device-pixel-ratio: 3/2), 
+          only screen and (min-device-pixel-ratio: 1.5) {
+    @content;
+  }
+}

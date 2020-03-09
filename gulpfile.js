@@ -43,7 +43,9 @@ function stylesDev(){
           .pipe(sourcemaps.init())
           .pipe(sass().on('error', sass.logError))
           .pipe(concat('styles.css'))
-          .pipe(autoprefixer())
+          .pipe(autoprefixer({
+            browsers: ['>1%']
+          }))
           .pipe(cleanCSS({
             level: 2
           }))
@@ -56,7 +58,9 @@ function stylesBuild(){
   return src(cssFiles)
           .pipe(sass().on('error', sass.logError))
           .pipe(concat('styles.css'))
-          .pipe(autoprefixer())
+          .pipe(autoprefixer({
+            browsers: ['>1%']
+          }))
           .pipe(cleanCSS({
             level: 2
           }))

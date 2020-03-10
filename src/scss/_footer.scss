@@ -4,6 +4,11 @@
 
   background-color: #9C69E2;
 
+  @include tablet {
+    padding-top: 52px;
+    padding-bottom: 40px;
+  }
+
   &__container {
     display: grid;
     grid-template-areas:  "logo menu"
@@ -11,19 +16,39 @@
     grid-template-rows: auto auto;
     grid-template-columns: 1fr auto;
 
-    @include tablet() {
+    margin: 0 20px;
+
+    @include tablet {
       display: flex;
       justify-content: space-between;
       align-items: flex-start;
+
+      margin: 0 24px;
+    }
+
+    @include tablet-ipad {
+      margin: 0 30px;
     }
   }
 
   &__logo {
     grid-area: logo;
+
+    @include tablet {
+      margin-top: 6px;
+    }
+
+    @include tablet-ipad {
+      margin-right: 73px;
+    }
   }
 
   &__menu {
     grid-area: menu;
+
+    @include tablet-ipad {
+      margin-right: auto;
+    }
   }
 
   &__form {

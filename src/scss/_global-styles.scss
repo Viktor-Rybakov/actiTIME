@@ -49,8 +49,19 @@ a {
 }
 
 .fix-container {
-  margin: 0 20px;
+  max-width: 1320px;
 
+  @include min-width(1024) {
+    margin: 0 30px;
+  }
+
+  @include desktop {
+    margin: 0 20px;
+  }
+
+  @include min-width(1360px) {
+    margin: 0 auto;
+  }
 }
 
 .hidden {

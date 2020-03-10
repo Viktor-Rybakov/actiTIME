@@ -1,6 +1,12 @@
 .footer-menu {
   margin-bottom: 32px;
+
   color: #fff;
+  line-height: 250%;
+
+  @include tablet {
+    margin-bottom: 0;
+  }
 
   &__list {
     margin: 0;
@@ -13,7 +19,6 @@
   }
 
   &__link {
-    line-height: 250%;
 
     &:focus,
     &:hover {

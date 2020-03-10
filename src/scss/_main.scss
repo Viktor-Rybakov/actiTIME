@@ -2,9 +2,14 @@
   padding-top: 48px;
   padding-bottom: 73px;
 
+  @include tablet {
+    padding-bottom: 92px;
+  }
+
   &__heading {
     margin-top: 0;
     margin-bottom: 40px;
+    padding: 0 20px;
 
     font-weight: bold;
     font-size: 2.188rem;
@@ -14,13 +19,30 @@
   }
 
   &__description {
-    margin-top: 0;
-    margin-bottom: 54px;
-    padding-left: 20px;
-    padding-right: 20px;
+    max-width: 650px;
+    margin: 0 auto 54px auto;
+    padding: 0 20px;
 
     font-size: 1.438rem;
     line-height: 160%;
     text-align: center;
+
+    @include tablet {
+      margin-bottom: 57px;
+      padding: 0;
+    }
+  }
+
+  &__slider {
+    max-width: 1200px;
+
+    @include tablet {
+      position: relative;
+
+      margin-left: auto;
+      margin-right: auto;
+
+      border-radius: 50px;
+    }
   }
 }

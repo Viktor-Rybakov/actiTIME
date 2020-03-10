@@ -1,0 +1,88 @@
+.slider {
+  padding: 38px 20px 30px;
+
+  background-color: #FFC84D;
+
+  @include tablet {
+    padding: 97px 142px 130px 150px;
+    width: fit-content;
+  }
+
+  @include desktop {
+    padding: 97px 120px 130px 150px;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+
+    width: fit-content;
+    margin: 0 auto 50px;
+    padding: 0;
+
+    list-style: none;
+    counter-reset: num;
+
+    @include tablet {
+      margin: 0 auto;
+    }
+  }
+
+  &__list-item {
+    display: none;
+
+    @include tablet {
+      position: relative;
+    }
+
+    &:not(:last-of-type) {
+
+      @include tablet {
+        // margin-right: 150px;
+      }
+    }
+
+    &::before {
+
+      @include tablet {
+        content: counter(num);
+        counter-increment: num;
+
+        position: absolute;
+        top: 16px;
+        left: -64px;
+        z-index: 1;
+
+        display: block;
+
+        color: #9C69E2;
+        font-size: 202px;
+        font-weight: bold;
+
+      }
+    }
+
+    &--active {
+      display: block;
+    }
+  }
+
+  &__item {
+    max-width: 390px;
+    min-height: 358px;
+    margin: 0 auto;
+
+    @include tablet {
+      width: 390px;
+    }
+  }
+
+  &__controls {
+
+    @include tablet {
+      position: absolute;
+      bottom: 55px;
+      left: 55px;
+    }
+  }
+}

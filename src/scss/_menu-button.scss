@@ -2,17 +2,34 @@
   width: 44px;
   height: 44px;
   padding: 0;
-  margin: -10px -4px;
+  margin-top: -10px;
+  margin-bottom: -10px;
 
   background-color: transparent;
-  background-image: url(../img/menu-burger.png);
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 36px 24px;
   border: none;
   cursor: pointer;
 
-  @include retina {
-    background-image: url('data:image/svg+xml,%3Csvg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="36" height="3" rx="1.5" fill="%23212353"/%3E%3Crect y="10.5" width="36" height="3" rx="1.5" fill="%23212353"/%3E%3Crect y="21" width="36" height="3" rx="1.5" fill="%23212353"/%3E%3C/svg%3E%0A');
+  &--open {
+    background-image: url(../img/menu-burger.png);
+    background-size: 36px 24px;
+
+    @include retina {
+      background-image: url('data:image/svg+xml,%3Csvg width="36" height="24" viewBox="0 0 36 24" fill="none" xmlns="http://www.w3.org/2000/svg"%3E%3Crect width="36" height="3" rx="1.5" fill="%23212353"/%3E%3Crect y="10.5" width="36" height="3" rx="1.5" fill="%23212353"/%3E%3Crect y="21" width="36" height="3" rx="1.5" fill="%23212353"/%3E%3C/svg%3E%0A');
+    }
   }
+
+  &--close {
+    background-image: url(../img/menu-cross.png);
+    background-size: 28px 28px;
+
+    @include retina {
+      background-image: url("data:image/svg+xml,%3Csvg width='28' height='28' viewBox='0 0 28 28' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect y='25.4558' width='36' height='3' rx='1.5' transform='rotate(-45 0 25.4558)' fill='%23212353'/%3E%3Crect width='36' height='3' rx='1.5' transform='matrix(-0.707107 -0.707107 -0.707107 0.707107 27.5772 25.4558)' fill='%23212353'/%3E%3C/svg%3E");
+    }
+  }
+
+
+
+  
 }

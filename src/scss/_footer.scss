@@ -9,6 +9,10 @@
     padding-bottom: 40px;
   }
 
+  @include min-width(1024px) {
+    padding-top: 74px;
+  }
+
   &__container {
     display: grid;
     grid-template-areas:  "logo menu"
@@ -23,23 +27,38 @@
       justify-content: space-between;
       align-items: flex-start;
 
-      margin: 0 24px;
+      margin: 0 27px;
     }
 
     @include tablet-ipad {
-      margin: 0 30px;
+      margin: 0 34px;
+    }
+
+    @include min-width(1320px) {
+      margin: 0 20px;
+    }
+
+    @include min-width(1360px) {
+      margin: 0 auto;
     }
   }
 
   &__logo {
     grid-area: logo;
+    flex-shrink: 0;
+    margin-left: 4px;
 
     @include tablet {
       margin-top: 6px;
+      margin-left: 0;
     }
 
     @include tablet-ipad {
       margin-right: 73px;
+    }
+
+    @include min-width(1024px) {
+      margin-right: 192px;
     }
   }
 

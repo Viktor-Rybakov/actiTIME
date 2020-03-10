@@ -2,23 +2,36 @@
   padding-top: 25px;
   padding-bottom: 25px;
 
+  @include min-width(1024px) {
+    padding-top: 29px;
+  }
+
   &__container {
     position: relative;
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include min-width(1320px) {
+      margin: 0 20px;
+    }
+
+    @include min-width(1360px) {
+      margin: 0 auto;
+    }
   }
 
   &__logo {
+    flex-shrink: 0;
     margin-left: 20px;
 
     @include tablet {
-      margin-left: 24px;
+      margin-left: 27px;
     }
   
     @include tablet-ipad {
-      margin-left: 30px;
+      margin-left: 35px;
     }
 
     @include min-width(1024px) {

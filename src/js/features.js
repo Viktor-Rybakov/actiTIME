@@ -7,10 +7,10 @@ if ( document.documentElement.clientWidth >= 1200 ) {
   features[2].classList.remove('slider__list-item--active');
   features[3].classList.remove('slider__list-item--active');
 
-  features[0].classList.remove('visually-hidden');
-  features[1].classList.remove('visually-hidden');
-  features[2].classList.add('visually-hidden');
-  features[3].classList.add('visually-hidden');
+  features[0].classList.remove('slider__list-item--visually-hidden');
+  features[1].classList.remove('slider__list-item--visually-hidden');
+  features[2].classList.add('slider__list-item--visually-hidden');
+  features[3].classList.add('slider__list-item--visually-hidden');
 
   controls[0].classList.add('controls__button--choosed');
   controls[1].classList.add('controls__button--hidden');
@@ -30,10 +30,10 @@ controls[0].onclick = function() {
     features[2].classList.remove('slider__list-item--active');
     features[3].classList.remove('slider__list-item--active');
   
-    features[0].classList.remove('visually-hidden');
-    features[1].classList.add('visually-hidden');
-    features[2].classList.add('visually-hidden');
-    features[3].classList.add('visually-hidden');
+    features[0].classList.remove('slider__list-item--visually-hidden');
+    features[1].classList.add('slider__list-item--visually-hidden');
+    features[2].classList.add('slider__list-item--visually-hidden');
+    features[3].classList.add('slider__list-item--visually-hidden');
   }
 
   if ( document.documentElement.clientWidth >= 1200 ) {
@@ -47,10 +47,10 @@ controls[0].onclick = function() {
     features[2].classList.remove('slider__list-item--active');
     features[3].classList.remove('slider__list-item--active');
 
-    features[0].classList.remove('visually-hidden');
-    features[1].classList.remove('visually-hidden');
-    features[2].classList.add('visually-hidden');
-    features[3].classList.add('visually-hidden');
+    features[0].classList.remove('slider__list-item--visually-hidden');
+    features[1].classList.remove('slider__list-item--visually-hidden');
+    features[2].classList.add('slider__list-item--visually-hidden');
+    features[3].classList.add('slider__list-item--visually-hidden');
   }
 }
 
@@ -67,10 +67,10 @@ controls[1].onclick = function() {
     features[2].classList.remove('slider__list-item--active');
     features[3].classList.remove('slider__list-item--active');
   
-    features[0].classList.add('visually-hidden');
-    features[1].classList.remove('visually-hidden');
-    features[2].classList.add('visually-hidden');
-    features[3].classList.add('visually-hidden');
+    features[0].classList.add('slider__list-item--visually-hidden');
+    features[1].classList.remove('slider__list-item--visually-hidden');
+    features[2].classList.add('slider__list-item--visually-hidden');
+    features[3].classList.add('slider__list-item--visually-hidden');
   }
 }
 
@@ -87,10 +87,10 @@ controls[2].onclick = function() {
     features[2].classList.add('slider__list-item--active');
     features[3].classList.remove('slider__list-item--active');
   
-    features[0].classList.add('visually-hidden');
-    features[1].classList.add('visually-hidden');
-    features[2].classList.remove('visually-hidden');
-    features[3].classList.add('visually-hidden');
+    features[0].classList.add('slider__list-item--visually-hidden');
+    features[1].classList.add('slider__list-item--visually-hidden');
+    features[2].classList.remove('slider__list-item--visually-hidden');
+    features[3].classList.add('slider__list-item--visually-hidden');
   }
 
   if ( document.documentElement.clientWidth >= 1200 ) {
@@ -104,10 +104,10 @@ controls[2].onclick = function() {
     features[2].classList.add('slider__list-item--active');
     features[3].classList.add('slider__list-item--active');
 
-    features[0].classList.add('visually-hidden');
-    features[1].classList.add('visually-hidden');
-    features[2].classList.remove('visually-hidden');
-    features[3].classList.remove('visually-hidden');
+    features[0].classList.add('slider__list-item--visually-hidden');
+    features[1].classList.add('slider__list-item--visually-hidden');
+    features[2].classList.remove('slider__list-item--visually-hidden');
+    features[3].classList.remove('slider__list-item--visually-hidden');
   }
 }
 
@@ -124,10 +124,10 @@ controls[3].onclick = function() {
     features[2].classList.remove('slider__list-item--active');
     features[3].classList.add('slider__list-item--active');
   
-    features[0].classList.add('visually-hidden');
-    features[1].classList.add('visually-hidden');
-    features[2].classList.add('visually-hidden');
-    features[3].classList.remove('visually-hidden');
+    features[0].classList.add('slider__list-item--visually-hidden');
+    features[1].classList.add('slider__list-item--visually-hidden');
+    features[2].classList.add('slider__list-item--visually-hidden');
+    features[3].classList.remove('slider__list-item--visually-hidden');
   }
 }
 
@@ -138,10 +138,10 @@ window.addEventListener('resize', function(event) {
     features[2].classList.remove('slider__list-item--active');
     features[3].classList.remove('slider__list-item--active');
   
-    features[0].classList.remove('visually-hidden');
-    features[1].classList.remove('visually-hidden');
-    features[2].classList.add('visually-hidden');
-    features[3].classList.add('visually-hidden');
+    features[0].classList.remove('slider__list-item--visually-hidden');
+    features[1].classList.remove('slider__list-item--visually-hidden');
+    features[2].classList.add('slider__list-item--visually-hidden');
+    features[3].classList.add('slider__list-item--visually-hidden');
   
     controls[0].classList.add('controls__button--choosed');
     controls[1].classList.remove('controls__button--choosed');
@@ -166,9 +166,9 @@ window.addEventListener('resize', function(event) {
     features[2].classList.remove('slider__list-item--active');
     features[3].classList.remove('slider__list-item--active');
   
-    features[0].classList.remove('visually-hidden');
-    features[1].classList.add('visually-hidden');
-    features[2].classList.add('visually-hidden');
-    features[3].classList.add('visually-hidden');
+    features[0].classList.remove('slider__list-item--visually-hidden');
+    features[1].classList.add('slider__list-item--visually-hidden');
+    features[2].classList.add('slider__list-item--visually-hidden');
+    features[3].classList.add('slider__list-item--visually-hidden');
   }
 });

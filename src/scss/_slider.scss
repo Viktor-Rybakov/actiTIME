@@ -8,6 +8,10 @@
     width: fit-content;
   }
 
+  @include min-width(1024px) {
+    padding: 97px 110px 130px 110px;
+  }
+
   @include desktop {
     padding: 97px 120px 130px 150px;
   }
@@ -35,11 +39,26 @@
       position: relative;
     }
 
-    &:not(:last-of-type) {
+    &:nth-of-type(odd) {
 
       @include min-width(1200px) {
+        margin-right: 110px;
+      }
+
+      @include desktop {
         margin-right: 150px;
       }
+    }
+
+    &--visually-hidden {
+      position: absolute !important;
+      clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+      clip: rect(1px, 1px, 1px, 1px);
+      padding:0 !important;
+      border:0 !important;
+      height: 1px !important; 
+      width: 1px !important; 
+      overflow: hidden;
     }
 
     &::before {

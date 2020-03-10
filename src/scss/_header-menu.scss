@@ -168,6 +168,7 @@
   }
 
   &__submenu-list {
+    display: none;
     margin: 0;
     padding: 0;
 
@@ -177,6 +178,10 @@
     
     background: #F9F4FF;
     border-top: 1px solid #D6B9FF;
+
+    &--open {
+      display: block;
+    }
 
     @include min-width(1024px) {
       position: absolute;

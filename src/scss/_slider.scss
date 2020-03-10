@@ -29,7 +29,7 @@
   }
 
   &__list-item {
-    display: none;
+    display: block;
 
     @include tablet {
       position: relative;
@@ -58,12 +58,7 @@
         color: #9C69E2;
         font-size: 202px;
         font-weight: bold;
-
       }
-    }
-
-    &--active {
-      display: block;
     }
   }
 

@@ -23,8 +23,20 @@ if ( windowsWidht < 1024 ) {
     buttonClose.classList.add('header__menu-button--hidden');
     headerMenu.setAttribute('aria-expanded', false);
   }
-}
 
+  document.body.onclick = function (e) {
+    e = e || event;
+    target = e.target || e.srcElement;
+  
+    if ( (headerMenu.getAttribute('aria-expanded') == 'true') && !(headerMenu.contains(target)) && !(buttonOpen.contains(target)) && !(buttonClose.contains(target)) ) {
+  
+      headerMenu.classList.remove('header-menu--open');
+      buttonOpen.classList.remove('header__menu-button--hidden');
+      buttonClose.classList.add('header__menu-button--hidden');
+      headerMenu.setAttribute('aria-expanded', false);
+    }
+  }
+}
 
 headerSubMenuButton.onclick = function() {
   headerSubMenuButton.classList.toggle('header-menu__submenu--open');
@@ -34,19 +46,5 @@ headerSubMenuButton.onclick = function() {
     headerSubMenuList.setAttribute('aria-expanded', false);
   } else {
     headerSubMenuList.setAttribute('aria-expanded', true);
-  }
-}
-
-document.body.onclick = function (e) {
-  e = e || event;
-  target = e.target || e.srcElement;
-
-  if ( (headerMenu.getAttribute('aria-expanded') == 'true') && !(headerMenu.contains(target)) && !(buttonOpen.contains(target)) && !(buttonClose.contains(target)) ) {
-    console.log(target);
-
-    headerMenu.classList.remove('header-menu--open');
-    buttonOpen.classList.remove('header__menu-button--hidden');
-    buttonClose.classList.add('header__menu-button--hidden');
-    headerMenu.setAttribute('aria-expanded', false);
   }
 }

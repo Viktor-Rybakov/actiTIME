@@ -12,8 +12,8 @@ const htmlbeautify = require('gulp-html-beautify');
 const gulpImage = require('gulp-image');
 
 const jsFiles = [
-  // './src/js/tabs.js',
-  // './src/js/accordion.js'
+  './src/js/features.js',
+  './src/js/menu.js'
 ]
 
 const cssFiles = [
@@ -130,7 +130,7 @@ exports.build = series(
   parallel(
     htmlBuild,
     stylesBuild,
-    // scriptsBuild,
+    scriptsBuild,
     imagesBuild,
     fontsBuild)
 );
@@ -140,6 +140,7 @@ exports.dev = series(
   parallel(
     htmlDev,
     stylesDev,
+    scriptsDev,
     imagesDev,
     fontsDev),
   watching

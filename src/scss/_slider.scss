@@ -37,8 +37,8 @@
 
     &:not(:last-of-type) {
 
-      @include tablet {
-        // margin-right: 150px;
+      @include min-width(1200px) {
+        margin-right: 150px;
       }
     }
 

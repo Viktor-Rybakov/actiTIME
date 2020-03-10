@@ -21,16 +21,16 @@
                 <img class="logo__image" src="img/logo.png" srcset="img/logo.svg" alt="Two purple and pink ovals.">
             </a>
 
-            <nav class="header__menu header-menu js-header-menu">
+            <nav id="header__menu" class="header__menu header-menu js-header-menu" aria-expanded="false">
                 <ul class="header-menu__list">
                     <li class="header-menu__list-item">
                         <a href="#" class="header-menu__link">About</a>
                     </li>
 
                     <li class="header-menu__list-item">
-                        <a class="header-menu__link header-menu__submenu js-header-menu__submenu">Help</a>
+                        <a class="header-menu__link header-menu__submenu js-header-menu__submenu" aria-controls="submenu">Help</a>
 
-                        <ul class="header-menu__submenu-list js-header-menu__submenu-list">
+                        <ul id="summenu" class="header-menu__submenu-list js-header-menu__submenu-list" aria-expanded="false">
                             <li class="header-menu__submenu-list-item">
                                 <a href="#" class="header-menu__submenu-link">User Guide</a>
                             </li>
@@ -49,8 +49,8 @@
                 <button class="header-menu__button" type="button">Sign Up</button>
             </nav>
 
-            <button class="header__menu-button menu-button menu-button--open js-menu-button--open" type="button" aria-label="Open menu"></button>
-            <button class="header__menu-button header__menu-button--hidden menu-button menu-button--close js-menu-button--close" type="button" aria-label="Slose menu"></button>
+            <button class="header__menu-button menu-button menu-button--open js-menu-button--open" type="button" aria-label="Open menu" aria-controls="header__menu"></button>
+            <button class="header__menu-button header__menu-button--hidden menu-button menu-button--close js-menu-button--close" type="button" aria-label="Slose menu" aria-controls="header__menu"></button>
         </div>
     </header>
 
@@ -62,28 +62,28 @@
         <div class="main__slider slider">
             <ol class="slider__list">
                 <li class="slider__list-item js-slider__list-item slider__list-item--active">
-                    <article class="slider__item feature feature">
+                    <article id="feature1" class="slider__item feature feature">
                         <h2 class="feature__heading">First Feature</h2>
                         <p class="feature__description">Little Red Cap opened her eyes and when she saw the sunbeams dancing to and fro through the trees and how the ground was covered with beautiful flowers.</p>
                         <a href="#" class="feature__link">Learn more</a>
                     </article>
                 </li>
                 <li class="slider__list-item js-slider__list-item visually-hidden">
-                    <article class="slider__item feature">
+                    <article id="feature2" class="slider__item feature">
                         <h2 class="feature__heading">Second Feature</h2>
                         <p class="feature__description">Each time she picked one she thought that she could see an even more beautiful one a little way off, and she ran after it, going further and further into the woods.</p>
                         <a href="" class="feature__link">Learn more</a>
                     </article>
                 </li>
                 <li class="slider__list-item js-slider__list-item visually-hidden">
-                    <article class="slider__item feature">
+                    <article id="feature3" class="slider__item feature">
                         <h2 class="feature__heading">Third Feature</h2>
                         <p class="feature__description">The wolf pressed the latch, and the door opened. He stepped inside, went straight to the grandmother's bed, and ate her up.</p>
                         <a href="" class="feature__link">Learn more</a>
                     </article>
                 </li>
                 <li class="slider__list-item js-slider__list-item visually-hidden">
-                    <article class="slider__item feature feature--new">
+                    <article id="feature4" class="slider__item feature feature--new">
                         <h2 class="feature__heading">Fourth Feature</h2>
                         <p class="feature__description">Little Red Cap had run after the flowers. After she had gathered so many that she could not carry any more, she remembered her grandmother.</p>
                         <a href="" class="feature__link">Learn more</a>
@@ -91,10 +91,10 @@
                 </li>
             </ol>
             <div class="slider__controls controls">
-                <button class="controls__button js-controls__button controls__button--choosed" type="button" aria-label="Feature 1"></button>
-                <button class="controls__button js-controls__button" type="button" aria-label="Feature 2"></button>
-                <button class="controls__button js-controls__button" type="button" aria-label="Feature 3"></button>
-                <button class="controls__button js-controls__button" type="button" aria-label="Feature 4"></button>
+                <button class="controls__button js-controls__button controls__button--choosed" type="button" aria-label="Feature 1" aria-controls="feature1"></button>
+                <button class="controls__button js-controls__button" type="button" aria-label="Feature 2" aria-controls="feature2"></button>
+                <button class="controls__button js-controls__button" type="button" aria-label="Feature 3" aria-controls="feature3"></button>
+                <button class="controls__button js-controls__button" type="button" aria-label="Feature 4" aria-controls="feature4"></button>
             </div>
         </div>
     </main>
